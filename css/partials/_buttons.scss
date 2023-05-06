@@ -1,0 +1,87 @@
+a { 
+    @include typeface-2(p2, desktop);
+    text-decoration: none;
+    color: $black-normal;
+
+    transition: .5s ease;
+
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.btn {
+    background: $linear-normal;
+    border-radius: 16px;
+    padding: 12px 32px;
+    color: $white-light;
+
+    box-shadow: 0px 17px 17px rgba(169, 80, 196, 0.13),
+    0px 5.125px 5.125px rgba(169, 80, 196, 0.0847066),
+    0px 2.12866px 2.12866px rgba(169, 80, 196, 0.065),
+    0px 0.769896px 0.769896px rgba(169, 80, 196, 0.0452935);
+
+    transition: .3s ease;
+
+    &:hover {
+        box-shadow: 0px 17px 31px rgba(169, 80, 196, 0.27),
+        0px 5.125px 9.34559px rgba(169, 80, 196, 0.175929),
+        0px 2.12866px 3.88168px rgba(169, 80, 196, 0.135),
+        0px 0.769896px 1.40393px rgba(169, 80, 196, 0.094071);
+
+        transform: scale(1.02);
+    }
+}
+
+.link {
+    display: inline-block;
+    color: $primary-normal;
+
+    background-image: url('../assets/svg/icon-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+
+    font-size: 18px;
+
+    padding: 16px 16px 16px 40px;
+
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        position: absolute;
+
+        top: 75%;
+        left: 56px;
+
+        width: 0%;
+        height: 2px;
+
+        transition: .5s ease;
+
+        border-radius: 2px;
+        background-color: $secondary-light;
+    }
+
+    &:hover {
+        opacity: 0.8;
+        padding-left: 64px;
+        background-position: 8px 50%;
+        
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+.button-app {
+    transition: .5s ease;
+    
+    &:hover {
+        filter: drop-shadow(0px 51px 80px rgba(169, 80, 196, 0.08))
+        drop-shadow(0px 15.375px 24.1177px rgba(169, 80, 196, 0.0521271))
+        drop-shadow(0px 6.38599px 10.0172px rgba(169, 80, 196, 0.04))
+        drop-shadow(0px 2.30969px 3.62304px rgba(169, 80, 196, 0.027872))
+    }
+}
